@@ -11,6 +11,7 @@ export const useMyFetch: typeof useFetch = (request, opts?) => {
         mode: 'cors',
         headers,
         credentials: 'include',
+        server: false,
         ...opts 
     })
 }
