@@ -1,19 +1,22 @@
 <script setup lang="ts">
 const route = useRoute()
+const form = ref();
+
+const save = () => {
+  form.value.save();
+}
 </script>
 
 <template>
   <div>
-    <header>
-      <nav>
-        <ul>
-          <li><NuxtLink to="/">Index</NuxtLink></li>
-          <li><NuxtLink to="/add-product">Add Product</NuxtLink></li>
-        </ul>
-      </nav>
-    </header>
-    <h1>Nuxt Routing set up successfully!</h1>
-    <p>Current route: {{ route.path }}</p>
-    <a href="https://nuxt.com/docs/getting-started/routing" target="_blank">Learn more about Nuxt Routing</a>
+    <AppHeader title="Product Add">
+      <Button @click="save()">Save</Button>
+      <NuxtLink to="/"><Button>Cancel</Button></NuxtLink>
+    </AppHeader>
+    <section class="py-7">
+      <div class="container mx-auto px-3 max-w-[600px] justify-center justify-items-center">
+        <ProductForm ref="form" />
+      </div>
+    </section>
   </div>
 </template>
