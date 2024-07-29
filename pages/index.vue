@@ -27,7 +27,7 @@ const bulkDelete = async () => {
       <Button id="delete-product-btn" @click="bulkDelete()" :disabled="bulkSelect.length == 0">MASS DELETE</Button>
     </AppHeader>
     <section class="py-7">
-      <div class="container mx-auto px-3 grid gap-14 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center justify-items-center">
+      <div class="container mx-auto px-3 grid gap-14 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 justify-center justify-items-center text-center">
         <ProductCard v-model="bulkSelect" v-for="product in products" :key="product.id" :product="product" />
       </div>
     </section>
