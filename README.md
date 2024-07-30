@@ -20,6 +20,12 @@ yarn install
 bun install
 ```
 
+Configure a `.env` file
+
+```env
+API_URL=http://localhost:8000/
+```
+
 ## Development Server
 
 Start the development server on `http://localhost:3000`:
@@ -54,6 +60,13 @@ yarn build
 
 # bun
 bun run build
+```
+
+Static Build for production:
+
+```bash
+# npm
+npx nuxi generate
 ```
 
 Locally preview production build:
