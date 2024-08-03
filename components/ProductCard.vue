@@ -38,8 +38,9 @@ const toggleCheckbox = () => {
     <p>{{ product.sku }}</p>
     <p>{{ product.name }}</p>
     <p>{{ product.price }} $</p>
-    <p v-if="props.product.type == 'DVD'">Size: {{ product.attributes.size }} MB</p>
+    <p>{{ product.formated_attributes }}</p>
+    <!-- <p v-if="props.product.type == 'DVD'">Size: {{ product.attributes.size }} MB</p>
     <p v-else-if="props.product.type == 'Book'">Weight: {{ product.attributes.weight }}KG</p>
-    <p v-else-if="props.product.type == 'Furniture'">Dimentions: {{ product.attributes.height }}x{{ product.attributes.width }}x{{ product.attributes.length }}</p>
+    <p v-else-if="props.product.type == 'Furniture'">Dimentions: {{ product.attributes.height }}x{{ product.attributes.width }}x{{ product.attributes.length }}</p> -->
   </div>
 </template>
